@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+<section class="bg-color">
+    <div class="container col-10 ">
+        <div class=" head text-center py-5 position-relative">
+            <h1>Bookmarker</h1>
+        </div>
+        <div class="text-center color-custom">
+            <span><i class="fa-solid fa-bookmark fs-3"></i></span> <span class="fs-3 fw-bolder">Bookmark your favorite
+                sites</span> <span><i class="fa-solid fa-bookmark fs-3"></i></span>
+        </div>
+        <div class="w-100 mx-auto py-5 ">
+            <div class="form-group mb-3">
+                <label  class="fw-bold" for="bookMarkName"><span><i class="fa-solid fa-book-bookmark"></i></span> Site Name</label>
+                <input oninput="bookValidation()" placeholder="Book Mark Name" class="form-control" id="bookMarkName" type="text">
+            </div>
+            <div class="form-group mb-3">
+                <label class="fw-bold" for="webSiteUrl"><span><i class="fa-solid fa-link"></i></span> Site URL </label>
+                <input oninput="urlValidation()" placeholder="Web Site URL" class="form-control" id="webSiteUrl" type="text">
+            </div>
+            <button class="btn btn-danger" onclick="addElments()">Submit</button>
+        </div>
+        <div>
+            <table class=" table mt-5 bg-white">
+                <thead>
+                    <th>Index</th>
+                    <th>WebsiteName</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="myBody">
+                
+                </tbody>
+            </table>
+        </div>
+    </div>   
+    <div class="position-absolute start-50 top-50 translate-middle d-none" id="error">
+        <div class="bg-white p-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <span><i class="fa-solid fa-circle" style="color: #e30202;"></i></span>
+                    <span><i class="fa-solid fa-circle" style="color: #dfe302;"></i></span>
+                    <span><i class="fa-solid fa-circle" style="color: #06e302;"></i></span>
+                </div>
+                <button class="btn border-0" id="closeBtn">
+                    <i class="fa-solid fa-xmark close fs-3"></i>
+                </button>
+            </div>
+            <p>
+                Site Name or Url is not valid, Please follow the rules below
+            </p>
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fa-regular fa-circle-right"></i>
+                    Site name must contain at least 3 characters
+                    
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-right"></i>
+                    Site URL must be a valid one
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

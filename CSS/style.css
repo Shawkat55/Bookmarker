@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Inter:wght@200&family=Montserrat:wght@200;400;800&family=Open+Sans&family=Pacifico&family=Poppins&family=Roboto:wght@300&display=swap');
+
+body{
+  background-color: #f7ecde;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.head h1{
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+}
+.head h1::before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 10%;
+    bottom: 60px;
+    background-color: #fec260;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  .head h1:hover::before{
+    height: 25%;
+  }
+  .color-custom{
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+  
